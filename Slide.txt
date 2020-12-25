@@ -58,3 +58,16 @@ We will be using a class based component mostly
 
         #Lets start react
 
+# You might get an error message like operation not permitted on windows
+There are two reasons why this might happen.
+
+    - You are not running in an elevated cmd prompt.
+    - You have spaces in your username or path npm is looking for cache. For eg. "c:\Users\Fname Lastname...."
+    
+For the first one you can try running npx create-react-app newapp in an elevated cmd prompt. (Launching cmd as admin)
+
+For the second one you would have to replace the username on the path for npm config that has spaces with the alternative username windows generates which you can get by using the cmd DIR /X if you are in the location. "c:\Users\". After getting the alternative name you then run
+
+npm config set cache "C:\Users\Firstname~1\AppData\Roaming\npm-cache" --global
+
+where Firstname~1 is the alternative name you got from the DIR /X command. You should now be able to run npx create-react-app new-app with no errors.
