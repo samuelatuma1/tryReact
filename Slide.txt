@@ -1,0 +1,28 @@
+React is a library created by facebook, used for buildong interfaces, fron-end applications
+
+Some concepts in react include
+- Components
+- State
+- Props
+- Lifecycle 
+- Events
+
+COMPONENTS
+    Components are like all the "sections" of the application, that makes up the  application
+    Example, a todo list app might have the search component, the todo list component, the todo component, and the addTodo component
+
+STATE:
+    State is an object with values that determines how a component renders and behaves e.g of object {boy: 5, girl: 3}
+    We can also have an "application level" state by using a state manager like redux or context API
+
+    An application level state is data that'll be used across multiple components, e.g a todo in a todo application
+
+    e.g of a state 
+    state = {
+        title: "hello world"
+        body: 'This is hello world"
+    }
+
+
+                    How do we 
+
